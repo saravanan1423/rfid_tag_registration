@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - RFID System</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .login-container {
+            background-color: #ffffff;
+            padding: 40px 35px;
+            border-radius: 10px; /* more rectangular */
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            width: 380px;
+            transform: translate(-10%, -15%);
+        }
+
+        .login-container h2 {
+            margin-bottom: 25px;
+            color: #2d3748;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 22px;
+            position: relative;
+        }
+
+        .form-group label {
+            display: block;
+            color: #333;
+            font-size: 15px;
+            margin-bottom: 6px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1.8px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+            background-color: #fff;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #4a90e2;
+            box-shadow: 0 0 5px rgba(74, 144, 226, 0.4);
+        }
+
+        .submit-btn {
+            background-color: #4a90e2;
+            color: white;
+            padding: 12px;
+            width: 100%;
+            font-size: 16px;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #357ab8;
+        }
+
+        .toggle-password {
+            position: absolute;
+            right: 12px;
+            top: 38px;
+            cursor: pointer;
+            font-size: 14px;
+            color: #4a90e2;
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>RFID System Login</h2>
+        <form method="POST" action="/login">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" name="username" required placeholder="Enter your username">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" required placeholder="Enter your password">
+                <span class="toggle-password" onclick="togglePassword()">Show</span>
+            </div>
+            <button type="submit" class="submit-btn">Login</button>
+        </form>
+    </div>
+
+    <script>
+        function togglePassword() {
+            const passwordInput = document.getElementById('password');
+            const toggle = document.querySelector('.toggle-password');
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                toggle.textContent = 'Hide';
+            } else {
+                passwordInput.type = 'password';
+                toggle.textContent = 'Show';
+            }
+        }
+    </script>
+</body>
+</html>
