@@ -21,7 +21,7 @@ The below are the snapshots of the Projects.
 <h1>1)Home Page</h1>
 <img width="1917" height="861" alt="login" src="https://github.com/user-attachments/assets/ad0aef23-223f-4f08-86b2-a76067f3f267" />
 
-<h1>2)Registartion Page</h1>
+<h1>2)Registration Page</h1>
 
 <img width="1920" height="1080" alt="home" src="https://github.com/user-attachments/assets/c3339f9b-c1a4-4ba7-870c-3fcfa023ecbb" />
 
